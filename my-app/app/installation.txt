@@ -1,0 +1,29 @@
+Installation
+
+Nodejs: 
+
+```powershell
+https://nextjs.org/docs/app/getting-started/installation
+//install directly in powershell
+winget install --id OpenJS.NodeJS.LTS -e
+// for the path in terminal
+$nodePath = 'C:\Program Files\nodejs'
+$old = [Environment]::GetEnvironmentVariable('Path','User')
+if ([string]::IsNullOrEmpty($old)) { $new = $nodePath } else { $new = "$old;$nodePath" }
+[Environment]::SetEnvironmentVariable('Path',$new,'User')
+'Done. Now open a NEW PowerShell window and run: node -v'
+```
+
+Nextjs and Typescript Project:
+
+```powershell
+npx create-next-app@latest
+'Done. Now open a NEW PowerShell window and run:  npm run dev'
+```
+
+Material Ui icons:
+```powershell
+//https://mui.com/material-ui/material-icons/
+npm install @mui/icons-material @mui/material @emotion/styled @emotion/react 
+```
+
